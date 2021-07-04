@@ -55,12 +55,12 @@ class InfoExtraction:
     @staticmethod
     def get_data():
         influencers_df = pd.read_csv('D:\\Social_Media_Data_Extraction\\influencers_names.txt', delimiter=',')
-        influencers_df = influencers_df.head(3)
         infulencers_list = influencers_df['Names'].tolist()
         return infulencers_list
 
 
 if __name__ == "__main__":
+    # Pass your instagram username and Password
     config = {"Username": "aim__headshot",
               "Password": ""}
     res_dataframe = InfoExtraction(config).execute_pipeline()
